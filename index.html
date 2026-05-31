@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lalubhulu - Student Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Lalubhulu</div>
+            <div class="logo">
+                <i class="fas fa-code"></i> Lalubhulu
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="theme-toggle">
+                <button id="theme-btn" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -24,10 +33,67 @@
     <section id="about" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Hi, I'm Lalubhulu</h1>
-                <p class="subtitle">A passionate student learning web development</p>
-                <p class="description">Welcome to my portfolio! I'm exploring the world of web development and creating amazing projects along the way.</p>
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <div class="hero-avatar">
+                    <div class="avatar-circle">L</div>
+                </div>
+                <h1>Hi, I'm <span class="highlight">Lalubhulu</span></h1>
+                <p class="subtitle">Full Stack Web Developer & Student</p>
+                <p class="description">
+                    Passionate about creating beautiful, responsive websites and learning new technologies. 
+                    I love turning ideas into interactive digital experiences.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/lalubhulu" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-detail" class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a dedicated student with a passion for web development. Currently, I'm exploring the vast world 
+                        of HTML, CSS, and JavaScript to create amazing web experiences.
+                    </p>
+                    <p>
+                        My journey in web development started with a curiosity about how websites work, and it has evolved 
+                        into a passion for building responsive, user-friendly web applications.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me learning new technologies, reading tech blogs, or working on 
+                        side projects to enhance my skills.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Skills</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Dedication</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -38,20 +104,46 @@
             <h2>My Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3>HTML</h3>
-                    <p>Creating structured and semantic web pages</p>
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup and structured web pages</p>
                 </div>
                 <div class="skill-card">
-                    <h3>CSS</h3>
-                    <p>Designing beautiful and responsive layouts</p>
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Modern layouts with Flexbox and Grid</p>
                 </div>
                 <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
                     <h3>JavaScript</h3>
-                    <p>Adding interactivity to web applications</p>
+                    <p>Interactive features and animations</p>
                 </div>
                 <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
                     <h3>Responsive Design</h3>
-                    <p>Making websites work on all devices</p>
+                    <p>Mobile-first approach</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Git & GitHub</h3>
+                    <p>Version control and collaboration</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design principles</p>
                 </div>
             </div>
         </div>
@@ -63,19 +155,117 @@
             <h2>My Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <h3>Personal Portfolio</h3>
-                    <p>A responsive portfolio website showcasing my skills and projects</p>
-                    <p class="tech-stack">HTML • CSS • JavaScript</p>
+                    <p>A fully responsive portfolio website showcasing my skills and projects with smooth animations</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                    <p class="tech-stack"><i class="fas fa-code"></i> HTML • CSS • JavaScript</p>
                 </div>
                 <div class="project-card">
-                    <h3>Learning Journey</h3>
-                    <p>Documentation of my web development learning process</p>
-                    <p class="tech-stack">HTML • CSS</p>
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Todo App</h3>
+                    <p>An interactive todo application with local storage functionality and beautiful UI</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                    <p class="tech-stack"><i class="fas fa-code"></i> HTML • CSS • JavaScript</p>
                 </div>
                 <div class="project-card">
-                    <h3>Interactive Web App</h3>
-                    <p>A simple web application with interactive features</p>
-                    <p class="tech-stack">HTML • CSS • JavaScript</p>
+                    <div class="project-image">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Calculator App</h3>
+                    <p>A functional calculator with a modern interface and keyboard support</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                    <p class="tech-stack"><i class="fas fa-code"></i> HTML • CSS • JavaScript</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-weather-cloud"></i>
+                    </div>
+                    <h3>Weather App</h3>
+                    <p>Real-time weather application using API integration and dynamic content</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                    <p class="tech-stack"><i class="fas fa-code"></i> HTML • CSS • JavaScript • API</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Movie Search</h3>
+                    <p>Search and discover movies with detailed information and ratings</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                    <p class="tech-stack"><i class="fas fa-code"></i> HTML • CSS • JavaScript • API</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce UI</h3>
+                    <p>Modern e-commerce landing page with product showcase and cart functionality</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                    <p class="tech-stack"><i class="fas fa-code"></i> HTML • CSS • JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Started Learning Web Development</h3>
+                        <p class="timeline-date">2024</p>
+                        <p>Began my journey with HTML, CSS, and JavaScript fundamentals</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Built First Portfolio</h3>
+                        <p class="timeline-date">2024</p>
+                        <p>Created my first responsive portfolio website</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Explored JavaScript</h3>
+                        <p class="timeline-date">2024</p>
+                        <p>Mastered DOM manipulation and interactive features</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Learning APIs & Backend</h3>
+                        <p class="timeline-date">2024-Present</p>
+                        <p>Currently exploring APIs and backend technologies</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,11 +275,38 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get In Touch</h2>
-            <p>I'd love to hear from you! Feel free to reach out.</p>
-            <div class="contact-links">
-                <a href="https://github.com/lalubhulu" class="contact-link" target="_blank">GitHub</a>
-                <a href="mailto:lalubhulu@example.com" class="contact-link">Email</a>
-                <a href="#" class="contact-link">LinkedIn</a>
+            <p class="contact-subtitle">I'd love to hear from you! Feel free to reach out for any opportunities or just to say hi.</p>
+            <div class="contact-content">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                </form>
+                <div class="contact-links">
+                    <a href="mailto:lalubhulu@example.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/lalubhulu" class="contact-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -97,7 +314,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Lalubhulu. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2026 Lalubhulu. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> by Lalubhulu</p>
+            </div>
         </div>
     </footer>
 
